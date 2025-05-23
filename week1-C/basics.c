@@ -62,4 +62,26 @@ int main(void)
   }
 
   intFunc(5);
+
+  // while loop
+  int num1 = 0;
+  // constant (it doesn't change)
+  const int num2 = 10;
+
+  while (num1 < num2);
+  {
+    /* code */
+    printf("Hi");
+    num1++;
+  }
+
+  // do while loop
+  do
+  {
+    /* code */
+    printf("Hi");
+    num1++;
+  } while (num1 < num2);
+  
+  
 }
