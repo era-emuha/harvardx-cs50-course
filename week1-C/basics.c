@@ -52,6 +52,7 @@ int main(void)
   count = count + 1;
   count += 1;
   count++;
+  printf("%c", count);
 
   // iteration operator
   // for loop
@@ -71,7 +72,7 @@ int main(void)
   while (num1 < num2);
   {
     /* code */
-    printf("Hi");
+    printf("%i\n", num1);
     num1++;
   }
 
@@ -79,9 +80,31 @@ int main(void)
   do
   {
     /* code */
-    printf("Hi");
+    printf("%i\n", num1);
     num1++;
   } while (num1 < num2);
+
+  // Switch statement
+  int num3 = 10;
+  
+  switch (num3)
+  {
+  case 1:
+    /* code */
+    printf("1");
+    break;
+  case 2:
+    /* code */
+    printf("2");
+    break;
+  case 10:
+    /* code */
+    printf("10");
+    break;
+  
+  default:
+    break;
+  }
   
   
 }
