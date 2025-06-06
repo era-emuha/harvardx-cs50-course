@@ -34,4 +34,7 @@ int main(void)
     printf("%c %c %c\n", s[0], s[1], s[2]); // Print characters
     printf("%d %d %d\n", s[0], s[1], s[2]); // Print ASCII values
 
+    // declare and initialize an array
+    int hours[5] = { 1, 2, 3, 4, 5 };
+
 }
