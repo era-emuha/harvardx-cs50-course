@@ -1,8 +1,12 @@
 # import libraries
 import csv
 
+# Variable to hold the file path
+file_path = 'mydata.csv'
+read_mode = 'r'
+
 # Open the CSV file and read its contents
-with open('data.csv', mode='r') as file:
+with open(file_path, read_mode) as file:
     csv_reader = csv.reader(file)
     
     # Skip the header row
@@ -18,7 +22,7 @@ with open('data.csv', mode='r') as file:
 
 
 # Open the CSV file and read its contents
-with open('data.csv', mode='r') as file:
+with open(file_path, read_mode) as file:
     csv_dict_reader = csv.DictReader(file)
     
     # Read each row in the CSV file and append it to the dictionary
