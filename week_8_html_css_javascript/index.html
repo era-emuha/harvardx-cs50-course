@@ -35,13 +35,28 @@
         <input type="text" id="search" autofocus name="q" placeholder="Type your query here">
         <button type="submit">Search</button>
     </form>
-    <!-- Form with pattern matching -->
-     <form action="">
+    <!-- 
+    Form with pattern matching
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+    -->
+    <form action="" onsubmit="return validateEmail()">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
         <button type="submit">Submit</button>
         <p class="hint">Please enter a valid email address.</p>
-     </form>
+    </form>
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            // This regex requires at least one dot after the @
+            const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+            if (!regex.test(email)) {
+                alert('Please enter a valid email address (e.g., era@gmail.com).');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>
