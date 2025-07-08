@@ -18,7 +18,6 @@
     <h2>
         Key Topics
     </h2>
-    <p>
     <ul>
         <li>HTML Structure</li>
         <li>CSS Styling</li>
@@ -31,7 +30,18 @@
         <li>Best Practices</li>
         <li>Web Development Tools</li>
     </ul>
-    </p>
+    <form action="https://www.google.com/search" method="get">
+        <label for="search">Search the web:</label>
+        <input type="text" id="search" autofocus name="q" placeholder="Type your query here">
+        <button type="submit">Search</button>
+    </form>
+    <!-- Form with pattern matching -->
+     <form action="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <button type="submit">Submit</button>
+        <p class="hint">Please enter a valid email address.</p>
+     </form>
 </body>
 
 </html>
