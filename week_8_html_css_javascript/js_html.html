@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-JavaScript</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let input = document.querySelector('input');
+            input.addEventListener('keyup', function(event) {
+                let name = document.querySelector('p');
+                if (input.value) {
+                    name.innerHTML = `Hello, ${input.value}!`;
+                } else {
+                    name.innerHTML = 'Hello, whoever you are!';
+                }
+            });
+        });
+    </script>
+    <form action="">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="Type your name here">
+        <p>Hello, whoever you are!</p>
+    </form>
+</body>
+</html>
