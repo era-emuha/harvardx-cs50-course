@@ -7,9 +7,9 @@ def home():
     my_name = request.args.get("name", "Era")
     return render_template("index.html", name=my_name)
 
-@app.route("/greet")
+@app.route("/greet", methods=["POST"])
 def greet():
-    my_name = request.args.get("name", "")
+    my_name = request.form.get("name", "world")
     return render_template("greet.html", name=my_name)
 
 @app.route("/about")
